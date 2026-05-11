@@ -101,7 +101,6 @@ require __DIR__ . '/../src/conexion.php';
 
     <h2>Nuevo mensaje</h2>
 
-    <!-- ⭐ RUTA CORREGIDA AQUÍ ⭐ -->
     <form action="/proyecto-practicas-local-main/config/procesar_formulario.php" method="POST">
 
         <h3>Destinatario</h3>
