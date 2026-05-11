@@ -183,8 +183,17 @@ button:hover {
 .contenido form {
     text-align: left;
     margin: 0 auto;
+     max-width: 600px;
+    width: 100%;
+      display: block;
 }
 
+/* Asegurar que los inputs ocupen el ancho completo */
+.contenido form input,
+.contenido form select,
+.contenido form textarea {
+    width: 100% !important;
+}
 
 .contenido h2 {
     font-size: 32px;
@@ -727,8 +736,12 @@ button:hover {
     font-weight: bold;
 }
 
-/* Formulario */
-form {
+/* ================================
+   ESTILOS PARA FORMULARIOS SIN CLASES
+================================ */
+
+/* Formulario general */
+.contenido form {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -740,15 +753,8 @@ form {
     text-align: left;
 }
 
-/* Títulos dentro del formulario */
-form h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-/* Etiquetas */
-form label {
+/* Labels */
+.contenido form label {
     display: block;
     font-size: 14px;
     margin-bottom: 6px;
@@ -757,9 +763,9 @@ form label {
 }
 
 /* Inputs, selects y textarea */
-form input,
-form select,
-form textarea {
+.contenido form input,
+.contenido form select,
+.contenido form textarea {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -767,25 +773,23 @@ form textarea {
     font-size: 14px;
     margin-bottom: 15px;
     outline: none;
-    background: #fff;
 }
 
-/* Efecto focus */
-form input:focus,
-form select:focus,
-form textarea:focus {
+/* Focus */
+.contenido form input:focus,
+.contenido form select:focus,
+.contenido form textarea:focus {
     border-color: #d32f2f;
 }
 
 /* Textarea */
-form textarea {
+.contenido form textarea {
     resize: none;
     height: 120px;
 }
 
 /* Botón */
-form button,
-form input[type="submit"] {
+.contenido form button {
     width: 100%;
     padding: 12px 0;
     background: #d32f2f;
@@ -797,7 +801,6 @@ form input[type="submit"] {
     transition: 0.3s;
 }
 
-form button:hover,
-form input[type="submit"]:hover {
+.contenido form button:hover {
     background: #b71c1c;
 }

@@ -17,11 +17,12 @@ require __DIR__ . '/../src/conexion.php';
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <head>
     <meta charset="UTF-8">
     <title>Nuevo mensaje</title>
     <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+</head>
     <script>
         function cargarAlumnos() {
             const grupoId = document.getElementById("grupo_id").value;
@@ -99,14 +100,19 @@ require __DIR__ . '/../src/conexion.php';
 
 <main class="contenido">
 
-    <h2>Nuevo mensaje</h2>
+    <div class="contenido-flex registro-flex">
 
-    <form action="/proyecto-practicas-local-main/config/procesar_formulario.php" method="POST">
+        <div class="contenedor-formulario">
 
-        <h3>Destinatario</h3>
+             <h2>Nuevo mensaje</h2>
+                <div class="bloque">
+                <form action="/proyecto-practicas-local-main/config/procesar_formulario.php" method="POST">
 
-        <label>Grupo</label>
-        <select name="grupo_id" id="grupo_id" onchange="cargarAlumnos()" required>
+            <h3>Destinatario</h3>
+                <div class="caja-input">
+
+             <label>Grupo</label>
+             <select name="grupo_id" id="grupo_id" onchange="cargarAlumnos()" required>
             <option value="">Seleccionar grupo...</option>
 
             <?php
@@ -118,18 +124,27 @@ require __DIR__ . '/../src/conexion.php';
             }
             ?>
         </select>
-
+        </div>
         <div id="lista_alumnos"></div>
+        </div>
+        <div class="bloque">
+            <h3>Mensaje</h3>
 
-        <h3>Mensaje</h3>
+        <div class="caja-input">
+                    <label>Asunto</label>
+                    <input type="text" name="asunto" required>
+                </div>
 
-        <label>Asunto</label>
-        <input type="text" name="asunto" required>
+                <div class="caja-input">
+                    <label>Texto</label>
+                    <textarea name="mensaje" required></textarea>
+                </div>
 
-        <label>Texto</label>
-        <textarea name="mensaje" required></textarea>
-
+            </div>
+        <div class="caja-input">
+            <div class="bloque">
         <h3>Canal de envío</h3>
+         <div class="caja-input">
 
         <label>Canal</label>
         <select name="canal" required>
@@ -137,9 +152,13 @@ require __DIR__ . '/../src/conexion.php';
             <option value="Email">Email</option>
             <option value="WhatsApp">WhatsApp</option>
         </select>
+        </div>
+        </div>
 
         <br><br>
-        <button type="submit">Enviar</button>
+        <button class="boton-enviar" type="submit">Enviar</button>
+    </div>
+</div>
 
     </form>
 
