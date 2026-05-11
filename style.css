@@ -11,6 +11,10 @@
 body, html {
     height: 100%;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* CONTENEDOR PRINCIPAL */
 .contenedor {
@@ -21,7 +25,7 @@ body, html {
 /* LADO IZQUIERDO */
 .contenedor-izquierdo {
     width: 50%;
-    background: url("fondo.jpg") no-repeat center center/cover; 
+    background: url("fondo.png") no-repeat center center/cover; 
     position: relative;
 }
 
@@ -163,10 +167,7 @@ button:hover {
     text-decoration: none;
 }
 
-.icono:hover {
-    color: #d32f2f;
-}
-
+.icono:hover,
 .icono.activo {
     color: #d32f2f;
 }
@@ -179,20 +180,65 @@ button:hover {
     padding-right: 20px;
     text-align: center;
 }
-/* Evitar que los formularios se centren dentro de .contenido */
+
 .contenido form {
-    text-align: left;
-    margin: 0 auto;
-     max-width: 600px;
     width: 100%;
-      display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
-/* Asegurar que los inputs ocupen el ancho completo */
+/* Labels */
+.contenido form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+}
+/* Inputs, selects y textarea */
 .contenido form input,
 .contenido form select,
 .contenido form textarea {
-    width: 100% !important;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    outline: none;
+}
+/* Focus */
+.contenido form input:focus,
+.contenido form select:focus,
+.contenido form textarea:focus {
+    border-color: #d32f2f;
+}
+/* Textarea */
+.contenido form textarea {
+    resize: none;
+    height: 120px;
+}
+/* Botón */
+.contenido form button {
+    width: 100%;
+    padding: 12px 0;
+    background: #d32f2f;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contenido form button:hover {
+    background: #b71c1c;
 }
 
 .contenido h2 {
@@ -201,7 +247,7 @@ button:hover {
     color: #222;
 }
 
-/* TARJETAS INDEX */
+/* TARJETAS */
 .tarjetas-contenedor {
     display: flex;
     justify-content: center;
@@ -232,6 +278,22 @@ button:hover {
     border-radius: 50%;
     margin-bottom: 15px;
 }
+.tarjeta .circulo {
+    width: 60px;
+    height: 60px;
+    background: #d32f2f;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta .circulo i {
+    color: white;
+    font-size: 26px;
+}
+
 
 .tarjeta p {
     font-size: 18px;
@@ -239,32 +301,7 @@ button:hover {
     font-weight: 500;
 }
 
-/* BOTÓN FLOTANTE INDEX */
-.boton-flotante {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #d32f2f;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 26px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.boton-flotante:hover {
-    background: #b71c1c;
-}
-
 /* ESTILOS DEL HISTORIAL */
-
 .barra-superior {
     width: 100%;
     display: flex;
@@ -736,141 +773,60 @@ button:hover {
     font-weight: bold;
 }
 
-/* ================================
-   ESTILOS PARA FORMULARIOS SIN CLASES
-================================ */
+/* TARJETAS DE REGISTRO */
+.contenido .registro-opciones {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
 
-/* Formulario general */
-.contenido form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+.contenido .registro-opciones .opcion {
+    width: 180px;
+    height: 160px;
     background: #fff;
-    padding: 25px;
-    border: 1px solid #ddd;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    text-align: left;
-}
-
-/* Labels */
-.contenido form label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 6px;
-    color: #444;
-    font-weight: 500;
-}
-
-/* Inputs, selects y textarea */
-.contenido form input,
-.contenido form select,
-.contenido form textarea {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px;
-    font-size: 14px;
-    margin-bottom: 15px;
-    outline: none;
-}
-
-/* Focus */
-.contenido form input:focus,
-.contenido form select:focus,
-.contenido form textarea:focus {
-    border-color: #d32f2f;
-}
-
-/* Textarea */
-.contenido form textarea {
-    resize: none;
-    height: 120px;
-}
-
-/* Botón */
-.contenido form button {
-    width: 100%;
-    padding: 12px 0;
-    background: #d32f2f;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contenido form button:hover {
-    background: #b71c1c;
-}
-/* ================================
-   FORMULARIOS DENTRO DE .contenido
-================================ */
-
-.contenido form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 25px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    text-align: left;
-}
-
-.contenido form h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
     color: #333;
-}
-
-.contenido form label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: #444;
-}
-
-.contenido form input,
-.contenido form select,
-.contenido form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    background: #fafafa;
-}
-
-.contenido form input:focus,
-.contenido form select:focus,
-.contenido form textarea:focus {
-    border-color: #d32f2f;
-    background: #fff;
-    outline: none;
-}
-
-.contenido form textarea {
-    height: 120px;
-    resize: none;
-}
-
-.contenido form button {
-    width: 100%;
-    padding: 12px;
-    background: #d32f2f;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: 0.3s;
 }
 
-.contenido form button:hover {
-    background: #b71c1c;
+.contenido .registro-opciones .opcion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contenido .registro-opciones .opcion .circulo {
+    width: 55px;
+    height: 55px;
+    background: #d32f2f;
+    border-radius: 50%;
+    margin-bottom: 12px;
+
+}
+.registro-opciones .opcion .circulo {
+    width: 55px;
+    height: 55px;
+    background: #d32f2f;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido .registro-opciones .opcion span {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.registro-opciones .opcion .circulo i {
+    color: white;
+    font-size: 26px;
 }
