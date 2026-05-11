@@ -12,7 +12,7 @@ if (!isset($_SESSION['id_usuario'])) {
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -24,26 +24,26 @@ if (!isset($_SESSION['id_usuario'])) {
 
 <aside class="barra-lateral">
 
-    <a href="index.php" class="activo">
-        <i class="fas fa-home"></i> Inicio
+    <a href="index.php" class="icono activo">
+        <i class="fas fa-home"></i>
     </a>
 
-    <a href="formulario.php">
-        <i class="fas fa-comment"></i> Mensajes
+    <a href="formulario.php" class="icono">
+        <i class="fas fa-comment"></i>
     </a>
 
     <?php if ($_SESSION['tipo'] === 'Admin') { ?>
-        <a href="registro.php">
-            <i class="fas fa-users"></i> Registro
+        <a href="registro.php" class="icono">
+            <i class="fas fa-users"></i>
         </a>
     <?php } ?>
 
-    <a href="historial.php">
-        <i class="fas fa-file-alt"></i> Historial
+    <a href="historial.php" class="icono">
+        <i class="fas fa-file-alt"></i>
     </a>
 
-    <a href="logout.php">
-        <i class="fas fa-right-from-bracket"></i> Salir
+    <a href="logout.php" class="icono">
+        <i class="fas fa-right-from-bracket"></i>
     </a>
 
 </aside>

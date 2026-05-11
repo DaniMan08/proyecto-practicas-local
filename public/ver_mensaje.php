@@ -82,25 +82,25 @@ $resultDest = $stmt2->get_result();
 
 <aside class="barra-lateral">
 
-    <a href="index.php">
+    <a href="index.php" class="icono">
         <i class="fas fa-home"></i> Inicio
     </a>
 
-    <a href="formulario.php">
+    <a href="formulario.php" class="icono">
         <i class="fas fa-comment"></i> Mensajes
     </a>
 
     <?php if ($_SESSION['tipo'] === 'Admin') { ?>
-        <a href="registro.php">
+        <a href="registro.php" class="icono">
             <i class="fas fa-users"></i> Registro
         </a>
     <?php } ?>
 
-    <a href="historial.php">
+    <a href="historial.php" class="icono">
         <i class="fas fa-file-alt"></i> Historial
     </a>
 
-    <a href="logout.php">
+    <a href="logout.php" class="icono">
         <i class="fas fa-right-from-bracket"></i> Salir
     </a>
 
