@@ -26,6 +26,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
     <h1>ESCUELA DE TEATRO</h1>
 </header>
 
+
 <aside class="barra-lateral">
 
     <a href="index.php" class="icono">
@@ -39,11 +40,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
     <a href="registro.php" class="icono activo">
         <i class="fas fa-users"></i>
     </a>
-
-    <a href="crear_alumno.php" class="icono">
-        <i class="fas fa-user-graduate"></i>
-    </a>
-
+    
     <a href="historial.php" class="icono">
         <i class="fas fa-file-alt"></i>
     </a>
