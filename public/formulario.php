@@ -17,12 +17,13 @@ require __DIR__ . '/../src/conexion.php';
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <head>
     <meta charset="UTF-8">
     <title>Nuevo mensaje</title>
     <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+</head>  
+
+
     <script>
         function cargarAlumnos() {
             const grupoId = document.getElementById("grupo_id").value;
@@ -63,7 +64,7 @@ require __DIR__ . '/../src/conexion.php';
             checks.forEach(c => c.checked = checkbox.checked);
         }
     </script>
-</head>
+
 
 <body>
 
