@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Solo Admin puede registrar usuarios del sistema
+// Solo Admin puede registrar profesores
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: login.php");
     exit;
@@ -16,7 +16,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registrar Usuario del Sistema</title>
+    <title>Registrar Profesor</title>
     <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -32,7 +32,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
         <i class="fas fa-home"></i>
     </a>
 
-    <a href="mensajeria.php" class="icono">
+    <a href="formulario.php" class="icono">
         <i class="fas fa-comment"></i>
     </a>
 
@@ -52,27 +52,38 @@ if ($_SESSION['tipo'] !== 'Admin') {
 
 <main class="contenido">
 
-    <h2>Registrar Usuario del Sistema</h2>
+    <h2>Registrar Profesor</h2>
 
-    <form action="../config/guardar_usuario.php" method="POST">
+    <form action="../config/guardar_profesor.php" method="POST">
 
-        <h3>Datos del usuario</h3>
+        <h3>Datos del profesor</h3>
 
-        <label>Nombre de usuario</label>
-        <input type="text" name="nombre_usuario" required>
+        <label>Nombre</label>
+        <input type="text" name="nombre" required>
 
-        <label>Contraseña</label>
-        <input type="password" name="password" required>
+        <label>Apellidos</label>
+        <input type="text" name="apellidos" required>
 
-        <label>Tipo de usuario</label>
-        <select name="tipo" required>
-            <option value="Admin">Administrador</option>
-            <option value="Empleado">Empleado</option>
-            <option value="Alumno">Alumno</option>
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Teléfono</label>
+        <input type="tel" name="telefono" required>
+
+        <label>Fecha alta</label>
+        <input type="date" name="fecha_alta" required>
+
+        <label>Estado</label>
+        <select name="estado" required>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
         </select>
 
+        <!-- El rol SIEMPRE será Profesor -->
+        <input type="hidden" name="rol" value="Profesor">
+
         <br><br>
-        <button type="submit">Registrar usuario</button>
+        <button type="submit">Registrar profesor</button>
 
     </form>
 

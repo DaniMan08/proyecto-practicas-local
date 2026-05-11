@@ -804,3 +804,73 @@ button:hover {
 .contenido form button:hover {
     background: #b71c1c;
 }
+/* ================================
+   FORMULARIOS DENTRO DE .contenido
+================================ */
+
+.contenido form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.contenido form h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.contenido form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+
+.contenido form input,
+.contenido form select,
+.contenido form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    background: #fafafa;
+}
+
+.contenido form input:focus,
+.contenido form select:focus,
+.contenido form textarea:focus {
+    border-color: #d32f2f;
+    background: #fff;
+    outline: none;
+}
+
+.contenido form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contenido form button {
+    width: 100%;
+    padding: 12px;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contenido form button:hover {
+    background: #b71c1c;
+}

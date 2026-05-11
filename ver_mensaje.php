@@ -86,7 +86,7 @@ $resultDest = $stmt2->get_result();
         <i class="fas fa-home"></i> Inicio
     </a>
 
-    <a href="mensajeria.php" class="icono">
+    <a href="formulario.php" class="icono">
         <i class="fas fa-comment"></i> Mensajes
     </a>
 

@@ -78,7 +78,7 @@ require __DIR__ . '/../src/conexion.php';
         <i class="fas fa-home"></i>
     </a>
 
-    <a href="mensajeria.php" class="icono activo">
+    <a href="formulario.php" class="icono activo">
         <i class="fas fa-comment"></i>
     </a>
 

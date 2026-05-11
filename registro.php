@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Solo Admin puede registrar usuarios del sistema
+// Solo Admin puede acceder a esta página
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: login.php");
     exit;
@@ -16,10 +16,11 @@ if ($_SESSION['tipo'] !== 'Admin') {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registrar Usuario del Sistema</title>
+    <title>Registro de usuarios</title>
     <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
 <header class="cabecera">
@@ -32,7 +33,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
         <i class="fas fa-home"></i>
     </a>
 
-    <a href="mensajeria.php" class="icono">
+    <a href="formulario.php" class="icono">
         <i class="fas fa-comment"></i>
     </a>
 
@@ -52,29 +53,32 @@ if ($_SESSION['tipo'] !== 'Admin') {
 
 <main class="contenido">
 
-    <h2>Registrar Usuario del Sistema</h2>
+    <h2>Registro de usuarios</h2>
 
-    <form action="../config/guardar_usuario.php" method="POST">
+    <?php
+    if (isset($_GET['ok'])) {
 
-        <h3>Datos del usuario</h3>
+        $mensajes = [
+            'profesor'        => 'Profesor registrado correctamente.',
+            'alumno'          => 'Alumno registrado correctamente.',
+            'posible_alumno'  => 'Posible alumno registrado correctamente.',
+            'usuario'         => 'Usuario del sistema registrado correctamente.'
+        ];
 
-        <label>Nombre de usuario</label>
-        <input type="text" name="nombre_usuario" required>
+        if (isset($mensajes[$_GET['ok']])) {
+            echo "<p>{$mensajes[$_GET['ok']]}</p>";
+        }
+    }
+    ?>
 
-        <label>Contraseña</label>
-        <input type="password" name="password" required>
+    <p>Selecciona qué tipo de usuario deseas registrar:</p>
 
-        <label>Tipo de usuario</label>
-        <select name="tipo" required>
-            <option value="Admin">Administrador</option>
-            <option value="Empleado">Empleado</option>
-            <option value="Alumno">Alumno</option>
-        </select>
-
-        <br><br>
-        <button type="submit">Registrar usuario</button>
-
-    </form>
+    <ul>
+        <li><a href="crear_profesor.php">Registrar Profesor</a></li>
+        <li><a href="crear_alumno.php">Registrar Alumno</a></li>
+        <li><a href="crear_posible_alumno.php">Registrar Posible Alumno</a></li>
+        <li><a href="crear_usuario.php">Registrar Usuario del Sistema</a></li>
+    </ul>
 
 </main>
 

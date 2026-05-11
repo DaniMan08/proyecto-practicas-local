@@ -32,12 +32,16 @@ if ($_SESSION['tipo'] !== 'Admin') {
         <i class="fas fa-home"></i>
     </a>
 
-    <a href="formulario.php" class="icono">
+    <a href="mensajeria.php" class="icono">
         <i class="fas fa-comment"></i>
     </a>
 
     <a href="registro.php" class="icono activo">
         <i class="fas fa-users"></i>
+    </a>
+
+    <a href="crear_alumno.php" class="icono">
+        <i class="fas fa-user-graduate"></i>
     </a>
 
     <a href="historial.php" class="icono">

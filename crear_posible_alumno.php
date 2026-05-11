@@ -32,7 +32,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
         <i class="fas fa-home"></i>
     </a>
 
-    <a href="mensajeria.php" class="icono">
+    <a href="formulario.php" class="icono">
         <i class="fas fa-comment"></i>
     </a>
 

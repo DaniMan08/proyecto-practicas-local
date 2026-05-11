@@ -28,7 +28,7 @@ if (!isset($_SESSION['id_usuario'])) {
         <i class="fas fa-home"></i>
     </a>
 
-    <a href="mensajeria.php" class="icono">
+    <a href="formulario.php" class="icono">
         <i class="fas fa-comment"></i>
     </a>
 
@@ -37,10 +37,6 @@ if (!isset($_SESSION['id_usuario'])) {
             <i class="fas fa-users"></i>
         </a>
     <?php } ?>
-   
-    <a href="crear_profesor.php" class="icono">
-      <i class="fas fa-user-plus"></i>
-    </a>
 
     <a href="historial.php" class="icono">
         <i class="fas fa-file-alt"></i>
@@ -63,30 +59,9 @@ if (!isset($_SESSION['id_usuario'])) {
     }
     ?>
 
-<p>Selecciona una opción del menú para comenzar.</p>
-    <div class="tarjetas-contenedor">
-        <div class="tarjeta">
-            <a href="mensajeria.php">
-                <div class="circulo"></div>
-            </a>
-            <p>Mensajes</p>
-        </div>
-        
+    <p>Selecciona una opción del menú para comenzar.</p>
 
-        <div class="tarjeta">
-            <a href="grupo.php"> 
-                <div class="circulo"></div>
-            </a>
-            <p>Grupos</p>
-        </div>
-
-        <div class="tarjeta">
-            <a href="usuarios.php"> 
-                <div class="circulo"></div>
-            </a>
-            <p>Usuarios</p>
-        </div>
-    </div>
 </main>
+
 </body>
 </html>

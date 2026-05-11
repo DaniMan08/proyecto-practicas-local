@@ -54,7 +54,7 @@ $resultMensajes = $conexion->query($sqlMensajes);
         <i class="fas fa-home"></i>
     </a>
 
-    <a href="mensajeria.php" class="icono">
+    <a href="formulario.php" class="icono">
         <i class="fas fa-comment"></i>
     </a>
 
@@ -63,9 +63,6 @@ $resultMensajes = $conexion->query($sqlMensajes);
             <i class="fas fa-users"></i>
         </a>
     <?php } ?>
-    <a href="crear_profesor.php" class="icono">
-        <i class="fas fa-user-plus"></i>    
-    </a>
 
     <a href="historial.php" class="icono activo">
         <i class="fas fa-file-alt"></i>
