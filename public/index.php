@@ -37,10 +37,6 @@ if (!isset($_SESSION['id_usuario'])) {
             <i class="fas fa-users"></i>
         </a>
     <?php } ?>
-   
-    <a href="crear_profesor.php" class="icono">
-      <i class="fas fa-user-plus"></i>
-    </a>
 
     <a href="historial.php" class="icono">
         <i class="fas fa-file-alt"></i>

@@ -48,9 +48,6 @@ $tipo    = $_SESSION['tipo'];
             <i class="fas fa-users"></i>
         </a>
 
-        <a href="crear_profesor.php" class="icono">
-            <i class="fas fa-user-plus"></i>
-        </a>
     <?php } ?>
 
     <a href="historial.php" class="icono">

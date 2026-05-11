@@ -180,6 +180,9 @@ button:hover {
     padding-right: 20px;
     text-align: center;
 }
+.contenido p {
+    margin-bottom: 25px;
+}
 
 .contenido form {
     width: 100%;
