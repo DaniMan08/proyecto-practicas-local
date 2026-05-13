@@ -804,8 +804,10 @@ button:hover {
 
 .contenido p {
     margin: 8px 0;
-    font-size: 15px;
+    font-size: 20px;
     color: #333;
+    padding: 0 20px;
+    padding-bottom: 15px;
 }
 
 .contenido p strong {
