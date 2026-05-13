@@ -748,18 +748,18 @@ button:hover {
 }
 
 .ver-mensaje > div {
-    width: 100%;
-    max-width: 700px;   
-    margin: 0 auto 25px auto; 
-    padding: 0;         
-    background: none;  
-    border: none;     
-    box-shadow: none;   
+   width: 80%;              
+    max-width: 700px;       
+    margin: 0 auto 25px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 .ver-mensaje table {
-    width: 80%;              /* más pequeña */
-    max-width: 700px;        /* límite de ancho */
-    margin: 0 auto 25px auto;/* centrada */
+    width: 80%;              
+    max-width: 700px;        
+    margin: 0 auto 25px auto;
     border-collapse: collapse;
     background: #fff;
     border-radius: 10px;
