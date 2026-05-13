@@ -75,7 +75,7 @@ $tipo    = $_SESSION['tipo'];
                 <span>Nuevo mensaje</span>
             </a>
 
-            <a href="historial.php" class="opcion-menu activo">
+            <a href="historial.php" class="opcion-menu">
                 <i class="fa-solid fa-inbox"></i>
                 <span>Enviados</span>
             </a>

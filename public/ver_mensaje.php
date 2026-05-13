@@ -148,7 +148,7 @@ if ($resultDest->num_rows > 0) {
 ?>
 
 <br>
-<a href="historial.php">← Volver al historial</a>
+<a href="historial.php" class="btn-volver">← Volver al historial</a>
 
 </main>
 
