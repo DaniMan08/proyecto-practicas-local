@@ -93,10 +93,10 @@ if ($resultMensajes->num_rows > 0) {
 
         echo "<h3>📩 Mensaje ID: {$msg['id_mensaje']}</h3>";
         echo "<p><strong>Asunto:</strong> {$msg['asunto']}</p>";
-        echo "<p><strong>Contenido:</strong> {$msg['contenido']}</p>";
+        //echo "<p><strong>Contenido:</strong> {$msg['contenido']}</p>"; NO HACE FALTA MOSTRARLO AQUÍ, SE VERÁ EN VER_MENSAJE.PHP
         echo "<p><strong>Fecha de envío:</strong> {$msg['fecha_envio']}</p>";
         echo "<p><strong>Remitente:</strong> {$msg['remitente']}</p>";
-        echo "<p><strong>Canal:</strong> {$msg['canal']}</p>";
+       // echo "<p><strong>Canal:</strong> {$msg['canal']}</p>"; NO HACE FALTA MOSTRARLO AQUÍ, SE VERÁ EN VER_MENSAJE.PHP
         echo "<p><strong>Destinatarios:</strong> {$msg['total_destinatarios']} alumno(s)</p>";
 
         echo "<a href='ver_mensaje.php?id={$msg['id_mensaje']}'>Ver detalles</a>";
