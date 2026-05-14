@@ -22,6 +22,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
      <style>
         p {text-align: center;
            color: red;
+           height: 10px;
         }
     </style>
 </head>

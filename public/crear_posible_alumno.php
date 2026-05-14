@@ -20,7 +20,8 @@ if ($_SESSION['tipo'] !== 'Admin') {
     <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        p {text-align: center;}
+        p {text-align: center;
+           height: 10px;}
     </style>
 </head>
 <body>
