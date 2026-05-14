@@ -17,8 +17,11 @@ if ($_SESSION['tipo'] !== 'Admin') {
 <head>
     <meta charset="UTF-8">
     <title>Registrar Profesor</title>
-    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
+    <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        p {text-align: center;}
+    </style>
 </head>
 <body>
 
@@ -55,24 +58,29 @@ if ($_SESSION['tipo'] !== 'Admin') {
 
     <h2>Registrar Profesor</h2>
 
-    <form action="../config/guardar_profesor.php" method="POST">
+    <form novalidate action="../config/guardar_profesor.php" method="POST">
 
         <h3>Datos del profesor</h3>
 
         <label>Nombre</label>
-        <input type="text" name="nombre" required>
+        <input type="text" name="nombre" id="nombre" required>
+        <p id="error_nombre" style="color: red; font-size: 16px;"></p>
 
         <label>Apellidos</label>
-        <input type="text" name="apellidos" required>
+        <input type="text" name="apellidos" id="apellidos" required>
+        <p id="error_apellidos" style="color: red; font-size: 16px;"></p>
 
         <label>Email</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" id="email" required>
+        <p id="error_email" style="color: red; font-size: 16px;"></p>
 
         <label>Teléfono</label>
-        <input type="tel" name="telefono" required>
+        <input type="tel" name="telefono" id="telefono" placeholder="917777777 respeta el formato" required>
+        <p id="error_telefono" style="color: red; font-size: 16px;"></p>
 
         <label>Fecha alta</label>
-        <input type="date" name="fecha_alta" required>
+        <input type="date" name="fecha_alta" id="fecha_alta" required>
+        <p id="error_fecha_alta" style="color: red; font-size: 16px;"></p>
 
         <label>Estado</label>
         <select name="estado" required>
@@ -89,6 +97,6 @@ if ($_SESSION['tipo'] !== 'Admin') {
     </form>
 
 </main>
-
+<script src="../js/val_profes_y_alumnos.js"></script>
 </body>
 </html>

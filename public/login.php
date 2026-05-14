@@ -1,10 +1,13 @@
+<!-- http://localhost/proyecto-practicas-local/public/login.php-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
+    <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
 </head>
+
 <body>
 
 <div class="contenedor">
@@ -22,15 +25,15 @@
 
     <!-- lado derecho -->
     <div class="contenedor-derecho">
-        <form class="formulario-login" action="../config/login_db.php" method="post">
+        <form novalidate class="formulario-login" action="../config/login_db.php" method="post">
             <h2>Inicio de sesión</h2>
 
             <?php if (isset($_GET["error"])) { ?>
-                <p>Usuario o contraseña incorrectos</p>
+                <p style="color: red; position: absolute; top: 720px;">Usuario o contraseña incorrectos</p>
             <?php } ?>
 
             <?php if (isset($_GET["logout"])) { ?>
-                <p>Sesión cerrada correctamente</p>
+                <p style="color: #3B82F6; position: absolute; top: 720px;">Sesión cerrada correctamente</p>
             <?php } ?>
 
             <div class="grupo-input">
@@ -51,3 +54,4 @@
 
 </body>
 </html>
+

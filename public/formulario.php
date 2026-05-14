@@ -19,7 +19,7 @@ require __DIR__ . '/../src/conexion.php';
 <head>
     <meta charset="UTF-8">
     <title>Nuevo mensaje</title>
-    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
+    <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
 </head>  
 

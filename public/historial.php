@@ -38,7 +38,7 @@ $resultMensajes = $conexion->query($sqlMensajes);
 <head>
     <meta charset="UTF-8">
     <title>Historial de mensajes</title>
-    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
+    <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 

@@ -28,10 +28,12 @@ $email            = trim($_POST['email'] ?? '');
 $notas            = trim($_POST['notas'] ?? '');
 
 // 2. Validación básica
+
 if ($nombre === '' || $apellidos === '' || $nivel_interes === '' || 
     $fecha_interes === '' || $tipo_interes === '') {
     die("Error: Faltan campos obligatorios.");
 }
+
 
 // Validar email si se ha introducido
 if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {

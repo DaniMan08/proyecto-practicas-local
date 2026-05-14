@@ -17,8 +17,11 @@ if ($_SESSION['tipo'] !== 'Admin') {
 <head>
     <meta charset="UTF-8">
     <title>Registrar Posible Alumno</title>
-    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
+    <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        p {text-align: center;}
+    </style>
 </head>
 <body>
 
@@ -55,53 +58,59 @@ if ($_SESSION['tipo'] !== 'Admin') {
 
     <h2>Registrar Posible Alumno</h2>
 
-    <form action="../config/guardar_posible_alumno.php" method="POST">
+    <form novalidate action="../config/guardar_posible_alumno.php" method="POST">
 
         <h3>Datos del posible alumno</h3>
 
         <label>Nombre</label>
-        <input type="text" name="nombre" required>
+        <input type="text" name="nombre" id="nombre" required>
+        <p id="error_nombre" style="color: red; font-size: 16px;"></p>
 
         <label>Apellidos</label>
-        <input type="text" name="apellidos" required>
+        <input type="text" name="apellidos" id="apellidos" required>
+        <p id="error_apellidos" style="color: red; font-size: 16px;"></p>
 
-        <label>Nivel de interés</label>
-        <select name="nivel_interes" required>
+        <label>Nivel</label>
+        <select name="nivel_interes" id="nivel_interes" required>
+            <option value="" selected>Elige una opción</option>
             <option value="Iniciación">Iniciación</option>
             <option value="Intermedio">Intermedio</option>
             <option value="Avanzado">Avanzado</option>
         </select>
+        <p id="error_nivel_interes" style="color: red; font-size: 16px;"></p>
 
         <label>Fecha interés</label>
-        <input type="date" name="fecha_interes" required>
+        <input type="date" name="fecha_interes" id="fecha_interes" required>
+        <p id="error_fecha_interes" style="color: red; font-size: 16px;"></p>
 
         <label>Tipo de interés</label>
         <select name="tipo_interes" required>
             <option value="No insistir">No insistir</option>
             <option value="Avisar más adelante">Avisar más adelante</option>
             <option value="Ex alumno">Ex alumno</option>
-        </select>
+        </select>        
 
         <label>Clase de prueba</label>
-        <select name="clase_prueba" required>
+        <select name="clase_prueba">
             <option value="0">No realizada</option>
             <option value="1">Realizada</option>
         </select>
 
         <label>Apuntado</label>
-        <select name="apuntado" required>
+        <select name="apuntado">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
 
         <label>Fecha apuntado</label>
-        <input type="date" name="fecha_apuntado">
+        <input type="date" name="fecha_apuntado">        
 
         <label>Horario apuntado</label>
         <input type="time" name="horario_apuntado">
 
         <label>Email</label>
-        <input type="email" name="email">
+        <input type="email" name="email" id="email" required>
+        <p id="error_email" style="color: red; font-size: 16px;"></p>
 
         <label>Notas</label>
         <textarea name="notas"></textarea>
@@ -112,6 +121,6 @@ if ($_SESSION['tipo'] !== 'Admin') {
     </form>
 
 </main>
-
+<script src="../js/val_posibles_alumnos.js"></script>
 </body>
 </html>

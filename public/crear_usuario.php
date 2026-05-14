@@ -17,8 +17,13 @@ if ($_SESSION['tipo'] !== 'Admin') {
 <head>
     <meta charset="UTF-8">
     <title>Registrar Usuario del Sistema</title>
-    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
+    <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <style>
+        p {text-align: center;
+           color: red;
+        }
+    </style>
 </head>
 <body>
 
@@ -54,22 +59,26 @@ if ($_SESSION['tipo'] !== 'Admin') {
 
     <h2>Registrar Usuario del Sistema</h2>
 
-    <form action="../config/guardar_usuario.php" method="POST">
+    <form novalidate action="../config/guardar_usuario.php" method="POST">
 
         <h3>Datos del usuario</h3>
 
         <label>Nombre de usuario</label>
-        <input type="text" name="nombre_usuario" required>
+        <input type="text" name="nombre_usuario" id="nombre" required>
+        <p id="error_nombre" style="color: red; font-size: 16px;"></p>
 
         <label>Contraseña</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" id="password" required>
+        <p id="error_password" style="color: red; font-size: 16px;"></p>
 
         <label>Tipo de usuario</label>
-        <select name="tipo" required>
+        <select name="tipo" id="tipo" required>
+            <option value="">-- Selecciona una opción --</option>
             <option value="Admin">Administrador</option>
             <option value="Empleado">Empleado</option>
             <option value="Alumno">Alumno</option>
         </select>
+        <p id="error_tipo" style="color: red; font-size: 16px;"></p>
 
         <br><br>
         <button type="submit">Registrar usuario</button>
@@ -77,6 +86,6 @@ if ($_SESSION['tipo'] !== 'Admin') {
     </form>
 
 </main>
-
+<script src="../js/val_registar_usuario_sistema.js"></script>
 </body>
 </html>
