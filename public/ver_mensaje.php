@@ -70,7 +70,7 @@ $resultDest = $stmt2->get_result();
 <head>
     <meta charset="UTF-8">
     <title>Detalles del mensaje</title>
-    <link rel="stylesheet" href="/proyecto-practicas-local-main/style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 

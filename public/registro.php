@@ -19,6 +19,9 @@ if ($_SESSION['tipo'] !== 'Admin') {
     <title>Registro de usuarios</title>
     <link rel="stylesheet" href="/proyecto-practicas-local/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        #excel{margin-top: 100px;}
+    </style>
 </head>
 
 <body>
@@ -99,7 +102,28 @@ if ($_SESSION['tipo'] !== 'Admin') {
     </a>
 
 </div>
+ 
+<!---------- Importar excel -------------->
+<div>
+    <h2 id="excel">Importar excel</h2>
+    <p>Elige esta opción si deseas añadir alumnos a la base de datos desde un archivo de excel</p>
+                                    <!-- enctype="multipart/form-data" necesario para subir ficheros -->
+    <form action="subir_excel.php" method="POST" enctype="multipart/form-data">
+                         
+        <label style="font-size: 20px;">Selecciona archivo Excel:</label>
 
+            <?php if (isset($_GET["valor"])) { ?>
+                <p style="color: green; margin-top: 8px;">
+                    Datos importados
+                </p>
+            <?php } ?><br>
+        <input type="file" name="excel" accept=".xlsx,.xls,.csv" style="padding:12px;"><br>
+                                    <!-- accept=".xlsx,.xls,.csv" extensiones admitidas -->
+        <button type="submit">Importar alumnos</button><br>        
+     
+
+    </form>
+</div>
 
 </main>
 
