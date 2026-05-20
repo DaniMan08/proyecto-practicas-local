@@ -59,7 +59,7 @@ if (!isset($_SESSION['id_usuario'])) {
     }
     ?>
 
-<p>Selecciona una opción del menú para comenzar.</p>
+ <p class="subtitulo-inicio subtitulo-mensajes">Selecciona una opción del menú para comenzar.</p>
     <div class="tarjetas-contenedor">
         <div class="tarjeta">
             <a href="mensajeria.php">

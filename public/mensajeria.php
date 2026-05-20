@@ -62,28 +62,28 @@ $tipo    = $_SESSION['tipo'];
 
 <!-- contenido principal -->
 <main class="contenido">
-
+    
     <h2>Mensajes</h2>
-
-  <p class="subtitulo-inicio">Selecciona una opción para gestionar tus mensajes.</p>
+    <p class="subtitulo-inicio subtitulo-mensajes">Selecciona una opción para gestionar tus mensajes.</p>
     <div class="tarjetas-contenedor">
 
-        <div class="tarjeta">
-            <a href="formulario.php">
-                <div class="circulo"><i class="fa-solid fa-pen"></i></div>
-            </a>
-            <p>Nuevo mensaje</p>
+    <a href="formulario.php" class="tarjeta">
+        <div class="circulo">
+            <i class="fas fa-pen"></i>
         </div>
 
-        <div class="tarjeta">
-            <a href="historial.php">
-                <div class="circulo"><i class="fa-solid fa-inbox"></i></div>
-            </a>
-            <p>Bandeja de entrada</p>
+        <p>Nuevo mensaje</p>
+    </a>
+
+    <a href="historial.php" class="tarjeta">
+        <div class="circulo">
+            <i class="fas fa-inbox"></i>
         </div>
 
-    </div>
+        <p>Bandeja de entrada</p>
+    </a>
 
+</div>
 </main>
 
 </body>

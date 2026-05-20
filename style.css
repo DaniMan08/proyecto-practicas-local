@@ -145,7 +145,6 @@ button:hover {
 
 .cabecera h1 {
     font-size: 20px;
-    margin: 0;
 }
 /* BARRA LATERAL */
 .barra-lateral {
@@ -178,17 +177,17 @@ button:hover {
 
 /* CONTENIDO PRINCIPAL (INDEX / HISTORIAL / MENSAJE) */
 .contenido {
-    margin-left: 70px; /* espacio barra lateral */
-    padding-top: 100px; /* espacio cabecera */
-    padding-left: 40px;
-    padding-right: 40px;
-    text-align: center;
-    align-items: center;
+    margin-left: 70px;
+    padding: 100px 40px 40px;
+    width: calc(100% - 70px);
 }
-.contenido p {
-    margin-bottom: 25px;
+/* SUBTÍTULO MENSAJES */
+.subtitulo-mensajes {
+    margin: 8px 0 25px 0;
+    font-size: 20px;
+    color: #333;
+    padding: 0 20px 15px;
 }
-
 .contenido form {
     width: 100%;
     max-width: 600px;
@@ -249,58 +248,65 @@ button:hover {
     background: #b71c1c;
 }
 
-/* TARJETAS */
+/* TARJETAS (CORREGIDAS Y AISLADAS) */
 .tarjetas-contenedor {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
+    margin-top: 30px;
 }
 
 .tarjeta {
     width: 200px;
     height: 180px;
-    background: #fff;
+    background: white;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 25px;
+    gap: 15px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
 .tarjeta:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .circulo {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     background: #d32f2f;
     border-radius: 50%;
-    margin-bottom: 15px;
-}
-.tarjeta .circulo {
-    width: 60px;
-    height: 60px;
-    background: #d32f2f;
-    border-radius: 50%;
-    margin-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.tarjeta .circulo i {
+.circulo i {
     color: white;
     font-size: 26px;
 }
 
-
 .tarjeta p {
-    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* VER MENSAJE */
+.ver-mensaje p {
+    margin: 8px 0;
+    font-size: 20px;
     color: #333;
-    font-weight: 500;
+    padding: 0 20px 15px;
 }
 
 /* ESTILOS DEL HISTORIAL */
@@ -469,6 +475,8 @@ button:hover {
     display: flex;
     gap: 40px;
     padding-right: 30px;
+    justify-content: center;
+    width: 100%;
 }
 /* CENTRA SOLO EL FORMULARIO DEL REGISTRO */
 .registro-flex {
@@ -483,6 +491,7 @@ button:hover {
 
 .contenedor-formulario h2 {
     font-size: 30px;
+    text-align: center;
     margin-bottom: 25px;
     color: #222;
 }
@@ -718,7 +727,7 @@ button:hover {
 }
 
 /* TEXTO DEL MENSAJE */
-.nombre {
+.fila-mensaje .nombre {
     margin-left: -50px;
     font-size: 15px;
     font-weight: 600;
@@ -746,22 +755,24 @@ button:hover {
     color: #c62828;
     margin-bottom: 25px;
     padding-bottom: 8px;
+    text-align: center;
 }
 
 .ver-mensaje > div {
    width: 80%;              
     max-width: 700px;       
     margin: 0 auto 25px auto;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
+    background: #ffe5e5;           
+    border: 2px solid #d32f2f;     
+    border-radius: 12px;
+    padding: 25px 30px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
 }
 .ver-mensaje table {
     width: 80%;              
     max-width: 700px;        
     margin: 0 auto 25px auto;
-    border-collapse: collapse;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -785,6 +796,13 @@ button:hover {
 .ver-mensaje tr:hover {
     background: #f9f9f9;
 }
+.ver-mensaje p {
+    margin: 8px 0;
+    font-size: 20px;
+    color: #333;
+    padding: 0 20px;
+    padding-bottom: 15px;
+}
 .btn-volver {
     display: block;
     font-size: 16px; 
@@ -801,18 +819,6 @@ button:hover {
 
 .btn-volver:hover {
     background: #d37272;
-}
-
-.contenido p {
-    margin: 8px 0;
-    font-size: 20px;
-    color: #333;
-    padding: 0 20px;
-    padding-bottom: 15px;
-}
-
-.contenido p strong {
-    color: #000;
 }
 
 /* tabla destinatarios */
@@ -843,28 +849,12 @@ button:hover {
 .contenido tr:hover {
     background: #f9f9f9;
 }
-
-/* enlace volver */
-.contenido a[href*="historial.php"] {
-    display: inline-block;
-    margin-top: 20px;
-    color: #c62828;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.contenido a[href*="historial.php"]:hover {
-    color: #a31818;
-    text-decoration: underline;
-}
-
 /* BLOQUES DEL HISTORIAL */
 .bloque-historial {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 18px 22px;;
+    border-radius: 14px;
+    padding: 18px 20px;;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     height: auto; 
     min-height: 210px;
