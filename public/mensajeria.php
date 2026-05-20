@@ -65,104 +65,21 @@ $tipo    = $_SESSION['tipo'];
 
     <h2>Mensajes</h2>
 
-    <div class="contenido-mensajes">
+  <p class="subtitulo-inicio">Selecciona una opción para gestionar tus mensajes.</p>
+    <div class="tarjetas-contenedor">
 
-        <!-- menú izquierdo -->
-        <nav class="menu-mensajes">
-
-            <a href="formulario.php" class="opcion-menu">
-                <i class="fa-solid fa-pen"></i>
-                <span>Nuevo mensaje</span>
+        <div class="tarjeta">
+            <a href="formulario.php">
+                <div class="circulo"><i class="fa-solid fa-pen"></i></div>
             </a>
+            <p>Nuevo mensaje</p>
+        </div>
 
-            <a href="historial.php" class="opcion-menu">
-                <i class="fa-solid fa-inbox"></i>
-                <span>Enviados</span>
+        <div class="tarjeta">
+            <a href="historial.php">
+                <div class="circulo"><i class="fa-solid fa-inbox"></i></div>
             </a>
-
-        </nav>
-
-        <!-- panel derecho -->
-        <div class="panel-mensajes">
-
-            <!-- barra superior -->
-            <div class="barra-superior">
-
-                <div class="buscador-grande">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Buscar mensajes...">
-                </div>
-
-                <div class="filtro-fecha-inline">
-                    <input type="date">
-                    <input type="date">
-                </div>
-                
-                <div class="filtros-container">
-                    <button class="boton-filtros"
-                    onclick="document.querySelector('.panel-filtros').classList.toggle('activo')">
-                        Filtros <i class="fas fa-sliders-h"></i>
-                    </button>
-
-                    <!-- panel desplegable -->
-                    <div class="panel-filtros">
-
-                        <div class="filtro-grupo">
-                            <label>Canal</label>
-                            <select class="filtro-select">
-                                <option>Todos</option>
-                                <option>Email</option>
-                                <option>WhatsApp</option>
-                            </select>
-                        </div>
-
-                        <button class="boton-aplicar">
-                            Aplicar filtros
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- lista de mensajes reales -->
-            <div class="lista-mensajes">
-
-                <?php
-                require __DIR__ . '/../src/conexion.php';
-
-                $sql = "
-                    SELECT m.id_mensaje, m.asunto, m.fecha_envio, m.canal
-                    FROM mensaje m
-                    WHERE m.id_remitente = ?
-                    ORDER BY m.fecha_envio DESC
-                ";
-
-                $stmt = $conexion->prepare($sql);
-                $stmt->bind_param("i", $_SESSION['id_usuario']);
-                $stmt->execute();
-                $result = $stmt->get_result();
-
-                if ($result->num_rows === 0) {
-                    echo "<p>No has enviado mensajes todavía.</p>";
-                }
-
-                while ($msg = $result->fetch_assoc()) {
-                    echo "
-                    <div class='fila-mensaje' onclick=\"location.href='ver_mensaje.php?id={$msg['id_mensaje']}'\">
-                        <div class='avatar'></div>
-                        <span class='nombre'>{$msg['canal']}</span>
-                        <span class='mensaje'>{$msg['asunto']}</span>
-                        <div class='mensaje-derecha'>
-                            <i class='fa-regular fa-clock'></i>
-                            <span>{$msg['fecha_envio']}</span>
-                        </div>
-                    </div>
-                    ";
-                }
-                ?>
-
-            </div>
-
+            <p>Bandeja de entrada</p>
         </div>
 
     </div>

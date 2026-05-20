@@ -440,10 +440,10 @@ button:hover {
 
 /* PÁGINA HISTORIAL */
 .lista-historial-grande {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
 }
 
 .item-historial {
@@ -658,12 +658,13 @@ button:hover {
 
 /* PANEL DERECHO */
 .panel-mensajes {
-    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    margin-top: 40px;
+    padding: 25px;
     background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 /* LISTA DE MENSAJES */
@@ -864,49 +865,46 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 18px 22px;;
-    margin-bottom: 22px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    text-align: left;
-    transition: all 0.2s ease;
-    max-width: 700px;
-    margin: 0 auto 25px auto;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    height: auto; 
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s ease;
 }
 
 .bloque-historial:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 /* TITULO DEL MENSAJE */
 .bloque-historial h3 {
-    margin: 0 0 12px 0;
-    font-size: 20px;
+   font-size: 18px;
     color: #c62828;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 /* TEXTO INTERNO*/
 .bloque-historial p {
-    margin: 4px 0;
+    margin: 5px 0;
     font-size: 15px;
     color: #333;
 }
 
 /* ENLACE VER DETALLES */
 .bloque-historial a {
-    display: inline-block;
-    margin-top: 12px;
     background: #d32f2f;
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 6px;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: 10px;
 }
 
 .bloque-historial a:hover {
@@ -969,4 +967,9 @@ button:hover {
 .registro-opciones .opcion .circulo i {
     color: white;
     font-size: 26px;
+}
+.contenido .lista-historial-grande {
+    text-align: left;
+    align-items: start;
+    justify-items: start;
 }

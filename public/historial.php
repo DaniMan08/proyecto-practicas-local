@@ -76,6 +76,49 @@ $resultMensajes = $conexion->query($sqlMensajes);
 <main class="contenido">
 
 <h2>Historial de mensajes</h2>
+<!-- PANEL DE MENSAJES -->
+    <div class="panel-mensajes">
+        <p class="descripcion-historial">Consulta aquí todos los mensajes enviados.</p>
+
+        <!-- barra superior -->
+        <div class="barra-superior">
+
+            <div class="buscador-grande">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar mensajes...">
+            </div>
+
+            <div class="filtro-fecha-inline">
+                <input type="date">
+                <input type="date">
+            </div>
+            
+            <div class="filtros-container">
+                <button class="boton-filtros"
+                onclick="document.querySelector('.panel-filtros').classList.toggle('activo')">
+                    Filtros <i class="fas fa-sliders-h"></i>
+                </button>
+
+                <!-- panel desplegable -->
+                <div class="panel-filtros">
+
+                    <div class="filtro-grupo">
+                        <label>Canal</label>
+                        <select class="filtro-select">
+                            <option>Todos</option>
+                            <option>Email</option>
+                            <option>WhatsApp</option>
+                        </select>
+                    </div>
+
+                    <button class="boton-aplicar">
+                        Aplicar filtros
+                    </button>
+
+                </div>
+            </div>
+        </div>
+   
 
 <?php
 // Mensaje de éxito
@@ -86,7 +129,7 @@ if (isset($_GET['ok']) && $_GET['ok'] === 'mensaje') {
 
 <?php
 if ($resultMensajes->num_rows > 0) {
-
+echo "<div class='lista-historial-grande'>";
     while ($msg = $resultMensajes->fetch_assoc()) {
 
         echo "<div class='bloque-historial'>";
@@ -101,14 +144,14 @@ if ($resultMensajes->num_rows > 0) {
 
         echo "<a href='ver_mensaje.php?id={$msg['id_mensaje']}'>Ver detalles</a>";
 
-        echo "</div><br>";
+        echo "</div>";
     }
-
+echo "</div>";
 } else {
     echo "<p>No hay mensajes enviados todavía.</p>";
 }
 ?>
-
+</div>
 </main>
 
 </body>
