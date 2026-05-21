@@ -72,6 +72,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 <div class="circulo"></div>
             </a>
             <p>Mensajes</p>
+            <span class="texto-pequeno">Selecciona una opción para gestionar tus mensajes.</span>
         </div>
         
 
@@ -80,6 +81,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 <div class="circulo"></div>
             </a>
             <p>Grupos</p>
+            <span class="texto-pequeno">Selecciona una opción para gestionar tus grupos.</span>
         </div>
 
         <div class="tarjeta">
@@ -87,6 +89,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 <div class="circulo"></div>
             </a>
             <p>Usuarios</p>
+            <span class="texto-pequeno">Selecciona una opción para gestionar tus usuarios.</span>
         </div>
     </div>
 </main>

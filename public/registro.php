@@ -86,24 +86,24 @@ if ($_SESSION['tipo'] !== 'Admin') {
 
 <div class="registro-opciones">
 
-    <a href="crear_profesor.php" class="opcion">
-        <div class="circulo"></div>
-        <span>Registrar Profesor</span>
+    <a href="crear_profesor.php" class="tarjeta">
+        <div class="circulo"><i class="fas fa-chalkboard-teacher"></i></div>
+        <p>Registrar Profesor</p>
     </a>
 
-    <a href="crear_alumno.php" class="opcion">
-        <div class="circulo"></div>
-        <span>Registrar Alumno</span>
+    <a href="crear_alumno.php" class="tarjeta">
+        <div class="circulo"><i class="fas fa-user-graduate"></i></div>
+        <p>Registrar Alumno</p>
     </a>
 
-    <a href="crear_posible_alumno.php" class="opcion">
-        <div class="circulo"></div>
-        <span>Registrar Posible Alumno</span>
+    <a href="crear_posible_alumno.php" class="tarjeta">
+        <div class="circulo"><i class="fas fa-user-plus"></i></div>
+        <p>Registrar Posible Alumno</p>
     </a>
 
-    <a href="crear_usuario.php" class="opcion">
-        <div class="circulo"></div>
-        <span>Registrar Usuario del Sistema</span>
+    <a href="crear_usuario.php" class="tarjeta">
+        <div class="circulo"><i class="fas fa-user-gear"></i></div>
+        <p>Registrar Usuario del Sistema</p>
     </a>
 
 </div>

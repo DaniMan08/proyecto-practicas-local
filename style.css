@@ -127,11 +127,12 @@ button:hover {
 /* CABECERA */
 .cabecera {
     width: 100%;
-    height: 70px;
+    height: 90px;
     background: linear-gradient(90deg, #d32f2f, #b71c1c);
     display: flex;
     align-items: center;
     padding-left: 25px;
+    margin-bottom: 25px;
     color: white;
     font-family: 'Segoe UI', Arial, sans-serif;
     font-weight: 600;
@@ -140,18 +141,23 @@ button:hover {
     top: 0;
     left: 0;
     z-index: 10;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2); 
 }
 
 .cabecera h1 {
-    font-size: 20px;
+    font-family: poppins, 'Segoe UI', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;  
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
 }
 /* BARRA LATERAL */
 .barra-lateral {
-   width: 300px;
+    width: 300px;
     background: #ffffff;
     height: 100vh;
-    padding-top: 100px; /* para que no tape la cabecera */
+    padding-top: 150px; /* para que no tape la cabecera */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,7 +198,9 @@ button:hover {
 /* CONTENIDO PRINCIPAL (INDEX / HISTORIAL / MENSAJE) */
 .contenido {
     margin-left: 70px;
+    margin-top: 20px;
     padding: 100px 40px 40px;
+    box-sizing: border-box;
     width: calc(100% - 70px);
 }
 /* SUBTÍTULO MENSAJES */
@@ -272,8 +280,9 @@ button:hover {
 }
 
 .tarjeta {
-    width: 200px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
+    padding: 20px;
     background: white;
     border-radius: 12px;
     display: flex;
@@ -482,6 +491,15 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
+.descripcion-historial {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px; /* separa del cuadro */
+    margin-top: 10px; 
+    padding-left: 0;
+    text-align: center;
+}
+
 
 /* ESTILOS DE NUEVO MENSAJE */
 
@@ -767,6 +785,7 @@ button:hover {
 .contenido h2 {
     font-size: 26px;
     color: #c62828;
+    margin-top: 50px;
     margin-bottom: 25px;
     padding-bottom: 8px;
     text-align: center;
@@ -976,4 +995,13 @@ button:hover {
     text-align: left;
     align-items: start;
     justify-items: start;
+}
+
+.texto-pequeno {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    display: block;
+    text-align: center;
+    font-weight: 400;
 }
