@@ -50,12 +50,12 @@ $resultMensajes = $conexion->query($sqlMensajes);
 
 <aside class="barra-lateral">
 
-    <a href="index.php" class="icono activo">
+    <a href="index.php" class="icono">
         <i class="fas fa-home"></i>
         <span>Inicio</span>
     </a>
 
-    <a href="mensajeria.php" class="icono">
+    <a href="mensajeria.php" class="icono activo">
         <i class="fas fa-comment"></i>
         <span>Mensajes</span>
     </a>

@@ -49,7 +49,7 @@ if ($_SESSION['tipo'] !== 'Admin') {
         </a>
     <?php } ?>
     
-    <a href="registro.php" class="icono" title="Usuarios">
+    <a href="registro.php" class="icono activo" title="Usuarios">
         <i class="fas fa-user"></i>
         <span>Registro de Usuarios</span>
     </a>

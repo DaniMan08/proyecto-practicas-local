@@ -148,10 +148,10 @@ button:hover {
 }
 /* BARRA LATERAL */
 .barra-lateral {
-    width: 70px;
+   width: 300px;
     background: #ffffff;
     height: 100vh;
-    padding-top: 80px; /* para que no tape la cabecera */
+    padding-top: 100px; /* para que no tape la cabecera */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,20 +159,34 @@ button:hover {
     position: fixed;
     top: 0;
     left: 0;
-    border-right: 1px solid #ddd;
+    border-right: 2px solid #e0e0e0;
 }
 
 .icono {
     font-size: 22px;
     color: #555;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.25s ease;
     text-decoration: none;
+    display: flex;               
+    align-items: center;        
+    gap: 15px;/* separación icono-texto */
+    padding: 12px 22px;  
+    width: 100%;
+    border-radius: 8px;
 }
 
 .icono:hover,
 .icono.activo {
     color: #d32f2f;
+}
+.icono i {
+    font-size: 22px;
+    color: #555;
+}
+.icono:hover i,
+.icono.activo i {
+    color: #b71c1c;
 }
 
 /* CONTENIDO PRINCIPAL (INDEX / HISTORIAL / MENSAJE) */
