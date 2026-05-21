@@ -26,24 +26,30 @@ if (!isset($_SESSION['id_usuario'])) {
 
     <a href="index.php" class="icono activo">
         <i class="fas fa-home"></i>
+        <span>Inicio</span>
     </a>
 
     <a href="mensajeria.php" class="icono">
         <i class="fas fa-comment"></i>
+        <span>Mensajes</span>
     </a>
 
     <?php if ($_SESSION['tipo'] === 'Admin') { ?>
         <a href="registro.php" class="icono">
             <i class="fas fa-users"></i>
+            <span>Registro de Grupos</span>
         </a>
     <?php } ?>
-
-    <a href="historial.php" class="icono">
-        <i class="fas fa-file-alt"></i>
+    
+    <a href="registro.php" class="icono" title="Usuarios">
+        <i class="fas fa-user"></i>
+        <span>Registro de Usuarios</span>
     </a>
+
 
     <a href="logout.php" class="icono">
         <i class="fas fa-right-from-bracket"></i>
+        <span>Cerrar Sesión</span>
     </a>
 
 </aside>
